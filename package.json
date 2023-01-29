@@ -15,7 +15,6 @@
       "access_user_profile"
     ],
     "buildTargets": [
-      "atlas",
       "mira"
     ],
     "i18n": {
