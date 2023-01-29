@@ -1,6 +1,7 @@
 import document from "document";
 import userActivity from "user-activity";
 import {today} from "user-activity";
+import {units} from "user-settings";
 
 export let stepsElem = document.getElementById("stepsText");
 export let calElem = document.getElementById("caloriesText");
@@ -25,7 +26,7 @@ export function updateActivity() {
   let floorsString = floorsValue;
   floorsElem.text = floorsString;
   
-  let actValue = (today.adjusted["activeMinutes"] || 0);
+  let actValue = (today.adjusted.activeZoneMinutes.total || 0);
   let actString = actValue;
   actElem.text = actString;
 

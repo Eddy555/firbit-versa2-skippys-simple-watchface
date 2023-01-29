@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@fitbit/sdk": "~4.2.0"
+    "@fitbit/sdk": "~4.3.0"
   },
   "fitbit": {
     "appUUID": "9c51d60d-4091-440a-babc-470448f8d2b1",
