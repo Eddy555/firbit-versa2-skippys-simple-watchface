@@ -1,12 +1,11 @@
 <svg class="background">
-  <g id="test">
+  <g id="weekText">
     <text id="weekLabelText">WEEK</text>
   </g>
   
   <text id="weekNumText" />
   <text id="dateText" />
   <text id="hoursMinutesText" />
-  <text id="secondsText" />
   <svg id="hr"> 
     <image id="heartRateIcon" class="icon" href="icons/stat_hr_solid_32px.png"/>
   </svg> 
@@ -28,7 +27,7 @@
   </svg> 
   <text id="distanceText" />
   <svg id="activity"> 
-    <image id="activityIcon" class="icon" href="icons/stat_am_solid_32px.png"/>
+    <image id="activityIcon" class="icon" href="icons/azm_32px.png"/>
   </svg> 
   <text id="activityText" />
 

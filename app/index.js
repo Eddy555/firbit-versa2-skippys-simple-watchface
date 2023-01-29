@@ -1,60 +1,36 @@
 import clock from "clock";
 import document from "document";
-import { preferences } from "user-settings";
-import { HeartRateSensor } from "heart-rate";
-import { locale } from "user-settings";
-import * as util from "../common/utils";
-import userActivity from "user-activity";
-import * as activity from "./activity.js"
+import * as dateTime from "./datetime.js";
+//import * as heartRate from "./heartrate.js";
+import * as activity from "./activity.js";
+//import { memory } from "system";
 
+import { HeartRateSensor } from "heart-rate";
+const hrElem = document.getElementById("heartRateText");
 
 // Update the clock every minute
 clock.granularity = "seconds";
 
-const weekLableElem = document.getElementById("weekLabelText");
-const weekNumElem = document.getElementById("weekNumText");
-const dElem = document.getElementById("dateText");
-const hmElem = document.getElementById("hoursMinutesText");
-const sElem = document.getElementById("secondsText");
-const hrElem = document.getElementById("heartRateText");
-
-
-let test = document.getElementById("test");
-test.groupTransform.rotate.angle = -90;
-//weekLableElem.text = "WEEK"
-//weekLableElem.groupTransform.rotate.angle = 90
-
-
-// ----------- TIME & DATE --------------
-// Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
-  let today = evt.date;
-  dElem.text = util.getWeekDay(today.getDay(),locale)+ " "+ today.getDate() + " " + util.getMonth(today.getMonth(),locale) + " " + today.getFullYear();
-  let hours = today.getHours();
-  if (preferences.clockDisplay === "12h") {
-    // 12h format
-    hours = util.monoDigits(hours % 12 || 12, false);
-  } else {
-    // 24h format
-    hours = util.zeroPad(hours);
-  }
-  let mins = util.monoDigits(today.getMinutes());
-  let secs = util.monoDigits(today.getSeconds());
-  hmElem.text = hours + ':' + mins;
-  sElem.text = secs;  
-  if(hrs.heartRate == null){
-    hrElem.text = "--";
-  }else{
-    hrElem.text = hrs.heartRate;
-  }
-  weekNumElem.text = util.getWeekNum(today);
 
+  //console.log("JS memory: " + memory.js.used + "/" + memory.js.total);
+  dateTime.updateDisplay(evt.date);
+  //heartRate.updateReading();
   activity.updateActivity();
+  dateTime.updateWeekNum(evt.date);
 
 }
 
-// ----------- HEART RATE --------------
-const hrs = new HeartRateSensor();
-hrs.start();
 
+// Create a new instance of the HeartRateSensor object
+var hrm = new HeartRateSensor();
 
+// Declare an event handler that will be called every time a new HR value is received.
+hrm.onreading = function() {
+  // Peek the current sensor values
+  //console.log("Current heart rate: " + hrm.heartRate);
+  hrElem.text = hrm.heartRate;
+}
+
+// Begin monitoring the sensor
+hrm.start();

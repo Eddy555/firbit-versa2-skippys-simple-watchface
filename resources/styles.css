@@ -35,12 +35,12 @@
 }
 
 #hoursMinutesText {
-  font-size: 100;
+  font-size: 105;
   font-family: Colfax;
-  text-length: 35;
+  text-length: 33;
   text-anchor: middle;
-  x: 50%-27;
-  y: 45%;
+  x: 50%;
+  y: 47%;
   fill: white;
 }
 
@@ -70,7 +70,7 @@
   text-buffer: 32;
   text-anchor: start;
   x: 45;
-  y: 175+25;
+  y: 175+27;
   fill: red;
 }
 
@@ -90,7 +90,7 @@
   text-buffer: 32;
   text-anchor: start;
   x: 45;
-  y: 220+25;
+  y: 220+27;
   fill: cornflowerblue;
 }
 
@@ -109,7 +109,7 @@
   text-buffer: 32;
   text-anchor: start;
   x: 45;
-  y: 265+25;
+  y: 265+27;
   fill: darkorchid;
 }
 
@@ -128,7 +128,7 @@
   text-buffer: 32;
   text-anchor: end;
   x: 260;
-  y: 175+25;
+  y: 175+27;
   fill: lightgreen;
 }
 
@@ -147,7 +147,7 @@
   text-buffer: 32;
   text-anchor: end;
   x: 260;
-  y: 220+25;
+  y: 220+27;
   fill: gold;
 }
 
@@ -166,6 +166,6 @@
   text-buffer: 32;
   text-anchor: end;
   x: 260;
-  y: 265+25;
+  y: 265+27;
   fill: orangered;
 }
