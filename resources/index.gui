@@ -1,0 +1,35 @@
+<svg class="background">
+  <g id="test">
+    <text id="weekLabelText">WEEK</text>
+  </g>
+  
+  <text id="weekNumText" />
+  <text id="dateText" />
+  <text id="hoursMinutesText" />
+  <text id="secondsText" />
+  <svg id="hr"> 
+    <image id="heartRateIcon" class="icon" href="icons/stat_hr_solid_32px.png"/>
+  </svg> 
+  <text id="heartRateText" />
+  <svg id="steps"> 
+    <image id="stepsIcon" class="icon" href="icons/stat_steps_solid_32px.png"/>
+  </svg> 
+  <text id="stepsText" />
+  <svg id="calories"> 
+    <image id="caloriesIcon" class="icon" href="icons/stat_cals_solid_32px.png"/>
+  </svg> 
+  <text id="caloriesText" />
+  <svg id="floors"> 
+    <image id="floorsIcon" class="icon" href="icons/stat_floors_solid_32px.png"/>
+  </svg> 
+  <text id="floorsText" />
+  <svg id="distance"> 
+    <image id="distanceIcon" class="icon" href="icons/stat_dist_solid_32px.png"/>
+  </svg> 
+  <text id="distanceText" />
+  <svg id="activity"> 
+    <image id="activityIcon" class="icon" href="icons/stat_am_solid_32px.png"/>
+  </svg> 
+  <text id="activityText" />
+
+</svg>
